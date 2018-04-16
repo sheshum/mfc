@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mfc-app">
+<head>
+    <title>MFC</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/auth/login/login.component.js"></script>
+    <script src="app/auth/signup/signup.component.js"></script>
+
+    <script src="app/components/sidebar/sidebar.component.js"></script>
+    <script src="app/components/header/header.component.js"></script>
+    <script src="app/components/messages/messages.component.js"></script>
+    <script src="app/components/message/message.component.js"></script>
+    <script src="app/components/footer/footer.component.js"></script>
+    <script src="app/utils/js/app.socket.io.js"></script>
+</head>
+
+<body class="chat">  
+
+    <div ng-view></div>  
+
+   <script src="app/utils/js/jquery-3.3.1.js"></script>
+   <script src="app/utils/js/index.js"></script>
+</body>
+</html>
