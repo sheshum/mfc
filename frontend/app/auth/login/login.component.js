@@ -8,11 +8,14 @@ angular.module('login', [])
 
     $scope.login = function() {
         var user = $scope.user;
-        AuthService.login( user, function( response ) {
-            //console.log('Response: ', response);
+        AuthService.login( user, function( err ) {
+            if( err ) {
+                console.log( err );
+            } else {
+                $location.path(['/auth']);
+            }
         });
-        //Socket.connect();
-        $location.path(['/auth']);
+       
        
     }
 

@@ -8,7 +8,8 @@
   }
 
 body {
-    background-image: url("images/dark.jpg");
+    background-image: url("images/rainbow.jpg");
+   
 }
 
 h3 {
@@ -26,7 +27,7 @@ h3 {
       margin: 0;
       padding: 0 20px 0 0;
       z-index: 1;
-      background: linear-gradient(325deg, rgb(83, 162, 189) 0%, rgb(79, 126, 187) 100%); /* w3c */
+      background: linear-gradient(325deg, rgb(42, 63, 84) 0%, rgb(42, 63, 84) 100%); /* w3c */
     
     
   }
@@ -74,7 +75,7 @@ h3 {
     overflow-y: scroll;
     width: 20%;
     height: 100vh;
-    background: linear-gradient(325deg, rgb(55, 132, 158) 0%, rgba(49, 84, 129, 0.438) 100%); /* w3c */
+    background: linear-gradient(325deg, rgb(42, 63, 84) 0%, rgba(42, 63, 84, 0.438) 100%); /* w3c */
 }
 
 .chat__main {
@@ -128,7 +129,7 @@ ul.msg-list {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: #eb11114d;
+    background: rgba(247, 247, 247, 0.226);
     padding: 15px;
 }
 
