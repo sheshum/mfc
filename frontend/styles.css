@@ -129,7 +129,7 @@ ul.msg-list {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: rgba(247, 247, 247, 0.226);
+    background: rgba(247, 247, 247, 0.5);
     padding: 15px;
 }
 
