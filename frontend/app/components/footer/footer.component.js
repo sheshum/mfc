@@ -9,7 +9,7 @@ angular.module('footer', [])
         this.onSend = function sendMessage() {
             
             Socket.emit('send_message', {
-                from: AuthService.getName(),
+                from: AuthService.loggedInUser.name,
                 text: this.message
             })
             this.message = '';

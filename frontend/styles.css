@@ -8,7 +8,8 @@
   }
 
 body {
-    background-image: url("images/rainbow.jpg");
+/*    background-image: url("images/rainbow.jpg");   */
+    
    
 }
 
@@ -116,10 +117,12 @@ ul.msg-list {
 }
 
 .msg-list li.contact {
+    
     background-color: rgba(229, 241, 62, 0.9);   
 }
 
 .msg-list li.user { 
+  
     background-color: rgba(149, 226, 240, 0.842);
 }
 

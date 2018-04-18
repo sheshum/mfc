@@ -25,7 +25,7 @@ angular.module('mfc-app', [
 .factory('AuthService', ['$http', '$rootScope', function authServiceFactory( $http, $rootScope ) {
     
     var authService = {};
-
+   
     authService.signup = function( user , callback ) {
         $http.post('/api/signup', { user }).then(function( response ){
 
@@ -50,6 +50,9 @@ angular.module('mfc-app', [
                 name: response.data.user.username,
                 token: response.data.token
             };
+
+            window.sessionStorage.setItem('token', response.data.token);
+            
 
             callback();
 

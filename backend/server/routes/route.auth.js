@@ -32,7 +32,7 @@ module.exports.signupRoute = function( req, res ) {
 };
 
 module.exports.loginRoute = function ( req, res ) {
-    console.log('Request bodu, login: ', req.body)
+    console.log('Login request: ', req.body)
     const username = req.body.user.username;
     const password = req.body.user.password;
 

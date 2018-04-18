@@ -9,7 +9,7 @@ angular.module('login', [])
     $scope.login = function() {
         var user = {
             username: $scope.username,
-            pssword: $scope.password
+            password: $scope.password
         }
         AuthService.login( user, function( err ) {
             if( err ) {
