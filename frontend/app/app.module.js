@@ -22,7 +22,7 @@ angular.module('mfc-app', [
     }]
 })
 
-.factory('AuthService', ['$http', '$rootScope', '$timeout', function authServiceFactory( $http, $rootScope, $timeout ) {
+.factory('AuthService', ['$http', '$rootScope', function authServiceFactory( $http, $rootScope ) {
     
     var authService = {};
 
@@ -43,25 +43,21 @@ angular.module('mfc-app', [
 
         $http.post('/api/login', { user } ).then(function( response ){
 
-            console.log('Response front end:' , response.data);
+            //console.log('Response front end:' , response.data);
             //PODACI O KORISNIKU  U RAM-u
             //treba da ima i token
             authService.loggedInUser = {
-                name: response.username
+                name: response.data.user.username,
+                token: response.data.token
             };
 
             callback();
 
         }).catch(function( err ){
-            callback(err.data.errmsg);
+            callback(err);
         });
 
     }
-
-    authService.getName = function() {
-        return this.loggedInUser.name;
-    }
-
 
 
     return authService;

@@ -1,18 +1,29 @@
 <div ng-controller="LoginController" class="login-wrapper">
-    <form ng-submit="login()" id="login-form">
+    <form ng-submit="login()" id="loginForm" name="loginForm" novalidate>
         <div class="form-field">
             <h3>Join and Chaturbate</h3>
         </div>
         <div class="form-field">
             <label for="">Username: </label>
-            <input ng-model="user.username" type="text" autofocus autocomplete="off">    
+            <input ng-model="username"
+                   name="username"
+                   type="text" 
+                   autofocus 
+                   autocomplete="off"
+                   required>
+            <p ng-show="loginForm.username.$invalid && !loginForm.username.$pristine">Username is required.</p>    
         </div>
         <div class="form-field">
             <label for="">Password: </label>
-            <input ng-model="user.password" type="password" autocomplete="off">
+            <input ng-model="password"
+                   name="password"
+                   type="password" 
+                   autocomplete="off"
+                   required>
+            <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine">Password is required.</p> 
         </div>
         <div class="form-field">
-            <button type="submit">Login</button>
+            <button ng-disabled="loginForm.$invalid" type="submit">Login</button>
         </div>
         <div class="form-field center">
             <p>Dont have an account?</p>

@@ -65,6 +65,11 @@ h3 {
  
   }
 
+  button:disabled {
+    background: #5d7483;
+    cursor: default;
+  }
+
 .chat {
   width: 100vw;
 }

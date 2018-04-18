@@ -11,7 +11,7 @@ angular.module('message', [])
       
         this.$onInit = function() {
             
-            self.name = AuthService.getName()
+            self.name = AuthService.loggedInUser.name;
             self.text = self.msg.text;
 
             if( self.msg.from === self.name ) {
