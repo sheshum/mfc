@@ -13,9 +13,7 @@ angular.module('mfc-app')
                 .when('/auth', {
                     templateUrl: 'app/app.template.html'
                 })
-                .otherwise('/login')
-               
-            
+                .otherwise('/login')           
 
     }   
 ]);

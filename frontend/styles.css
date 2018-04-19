@@ -8,8 +8,9 @@
   }
 
 body {
-/*    background-image: url("images/rainbow.jpg");   */
     
+/*    background-image: url("images/rainbow.jpg");   */
+    background-color: whitesmoke;
    
 }
 
@@ -135,7 +136,7 @@ ul.msg-list {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: rgba(247, 247, 247, 0.5);
+    background: rgb(247, 247, 247);
     padding: 15px;
 }
 

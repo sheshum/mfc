@@ -7,22 +7,12 @@ angular.module('mfc-app', [
     'login',
     'signup',
     'Socket',
-    'ngRoute'
+    'ngRoute',
+    'ngCookies'
 ])
 
 
-// OVO IZBACITI KAD  ODLUCIM STA CU SA SOCKET KONEKCIJOM
-.component('appRoot', {
-    templateUrl: 'app/app.template.html',
-    controller: ['Socket', function RootController( Socket ) {
-      
-            //Socket.connect();
-           
-        
-    }]
-})
-
-.factory('AuthService', ['$http', '$rootScope', function authServiceFactory( $http, $rootScope ) {
+.factory('AuthService', ['$http', '$rootScope', '$cookies', function authServiceFactory( $http, $rootScope, $cookies ) {
     
     var authService = {};
    
@@ -43,15 +33,23 @@ angular.module('mfc-app', [
 
         $http.post('/api/login', { user } ).then(function( response ){
 
-            //console.log('Response front end:' , response.data);
-            //PODACI O KORISNIKU  U RAM-u
-            //treba da ima i token
-            authService.loggedInUser = {
+           /*  authService.loggedInUser = {
                 name: response.data.user.username,
                 token: response.data.token
+            }; */
+
+            $rootScope.globals = {
+                currentUser : {
+                    username: response.data.user.username,
+                    token: response.data.token
+                }
             };
 
-            window.sessionStorage.setItem('token', response.data.token);
+            //window.sessionStorage.setItem('token', response.data.token);
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + response.data.token;
+            var cookieExp = new Date();
+            cookieExp.setDate(cookieExp.getDate() + 1);
+            $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
             
 
             callback();
