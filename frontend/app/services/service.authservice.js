@@ -17,24 +17,58 @@
         
         return authService;
 
-        function signup() {
+        function signup( user, callback ) {
+            $http.post('/api/signup', { user }).then(function( response ){
 
+                callback(null, response );
+    
+            }).catch(function( err ){
+    
+                callback( err.statusText );
+    
+            });
         }
 
-        function login() {
+        function login( user, callback ) {
+            $http.post('/api/login', { user } ).then(function( response ){
 
+                var _username = response.data.user.username;
+                var _token = response.data.token;
+                var _expiresIn = response.data.expiresIn;
+
+                 $rootScope.globals = {
+                     currentUser : {
+                         username: _username,
+                         token: _token
+                     }
+                 };
+                 
+                 setCredentials( _username, _token );
+   
+                 callback();
+     
+             }).catch(function( err ){
+                 callback(err);
+             });
         }
 
-        function logout() {
 
+        function logout( callback ) {
+            clearCredentials();
+            callback();
         }
 
-        function setCredentials() {
-
+        function setCredentials( username, token ) {
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
+            var cookieExp = new Date();
+            cookieExp.setDate(cookieExp.getDate() + 1);
+            $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
         }
 
         function clearCredentials() {
-
+            $rootScope.globals = {};
+            $cookies.remove('globals');
+            $http.defaults.headers.common['Authorization'] = 'Basic';
         }
 
 
