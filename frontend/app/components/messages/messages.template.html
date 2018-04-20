@@ -1,9 +1,6 @@
 
    <ul class="msg-list">
        <div ng-repeat="msg in $ctrl.messages">
-          <!--  <li ng-class="msg.from === user.username ? 'user' : 'contact'">
-               <p>{{msg.from}}: {{msg.text}}</p>   
-            </li>  --> 
             <app-message msg="msg"></app-message> 
        </div>
    </ul>

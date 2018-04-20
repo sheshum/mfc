@@ -9,8 +9,8 @@
 
 body {
     
-/*    background-image: url("images/rainbow.jpg");   */
-    background-color: whitesmoke;
+    background-image: url("images/space.jpg");  
+    background-color: #fd8058;
    
 }
 
@@ -29,7 +29,7 @@ h3 {
       margin: 0;
       padding: 0 20px 0 0;
       z-index: 1;
-      background: linear-gradient(325deg, rgb(42, 63, 84) 0%, rgb(42, 63, 84) 100%); /* w3c */
+      background: hsla(45, 24%, 13%, 0.993)
     
     
   }
@@ -84,7 +84,7 @@ h3 {
     overflow-y: auto;
     width: 20%;
     height: 100vh;
-    background: linear-gradient(325deg, rgb(42, 63, 84) 0%, rgba(42, 63, 84, 0.438) 100%); /* w3c */
+    background: linear-gradient(325deg, rgb(61, 61, 61) 0%, rgba(41, 41, 41, 0.938) 100%); /* w3c */
 }
 
 .chat__main {
@@ -136,7 +136,7 @@ ul.msg-list {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: rgb(247, 247, 247);
+    background: rgb(179, 179, 179);
     padding: 15px;
 }
 
