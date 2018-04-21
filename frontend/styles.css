@@ -9,8 +9,8 @@
 
 body {
     
-    background-image: url("images/space.jpg");  
-    background-color: #fd8058;
+    /* background-image: url("images/space.jpg");   */
+    background-color: #fff17a70;
    
 }
 
@@ -29,9 +29,8 @@ h3 {
       margin: 0;
       padding: 0 20px 0 0;
       z-index: 1;
-      background: hsla(45, 24%, 13%, 0.993)
-    
-    
+      background: hsla(28, 25%, 15%, 0.993)
+     
   }
 
   .chat__header li {
@@ -40,17 +39,20 @@ h3 {
 
   .chat__header li a {
       display: block;
-      color:white;
+      color:#e0dedb;
       text-align: center;
       padding: 15px 10px;
       line-height: 20px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
   }
 
   .chat__header li a:hover {
-      background-color: #265f82;
-      transition: background .6s ease;
+      background-color: #363533;
+      color: tomato;
+      transition: .6s ease;
+     
   }
 
   input {
@@ -87,6 +89,51 @@ h3 {
     background: linear-gradient(325deg, rgb(61, 61, 61) 0%, rgba(41, 41, 41, 0.938) 100%); /* w3c */
 }
 
+ul.sidebar__menu {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sidebar__menu li {
+    flex: 1 1 auto;
+}
+
+.sidebar__menu li a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    padding: 15px 10px;
+    text-align: center;
+    line-height: 20px;
+    color: #fd8058;
+}
+
+.sidebar__menu li a:hover {
+    border-bottom: 1px solid whitesmoke;
+    font-size: 1.2rem;
+    transition: border .6s ease;
+}
+
+.sidebar__search {
+    text-align: center;
+}
+
+.sidebar__search form {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.sidebar__search form input {
+    background-color: #424242bd;
+    border: none;
+    padding: 10px;
+    color: #fd8058;
+}
+
 .chat__main {
     position: fixed;
     right: 0;
@@ -104,7 +151,7 @@ ul.msg-list {
     max-height: 100vh;
     list-style-type: none;
     padding: 75px 205px;
-    overflow-y: scroll;
+    overflow-y: auto;
     
 }
 .msg-list li {
@@ -136,7 +183,7 @@ ul.msg-list {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: rgb(179, 179, 179);
+    background: #5f5e5cd2;
     padding: 15px;
 }
 
@@ -153,7 +200,15 @@ ul.msg-list {
     flex-grow: 1;
     border: none;
     padding: 10px;
-   
+    border-radius: 50px; 
+    background-color: #fae7e1fd;
+}
+
+
+.chat__footer button {
+   background-color: #fd8058;
+   /* background-color: tomato; */
+   border-radius: 5px;  
 }
 
 .login-wrapper {
