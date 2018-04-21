@@ -9,8 +9,8 @@
 
 body {
     
-    background-image: url("images/backgrounds/space.jpg");
-    background-color: #fff17a70;
+   /*  background-image: url("images/backgrounds/space.jpg"); */
+    background-color: #5808ecb4;
    
 }
 
@@ -35,6 +35,11 @@ h3 {
 
   .chat__header li {
       float: right;      
+  }
+
+  #user-picture {
+      width: 50;
+      height: 50px;
   }
 
   .chat__header li a {
@@ -169,12 +174,12 @@ ul.msg-list {
 
 .msg-list li.contact {
     
-    background-color: rgba(229, 241, 62, 0.9);   
+    background-color: rgb(229, 241, 62);   
 }
 
 .msg-list li.user { 
   
-    background-color: rgba(149, 226, 240, 0.842);
+    background-color: rgb(149, 226, 240);
 }
 
 .msg-list * {

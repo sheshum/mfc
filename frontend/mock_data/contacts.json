@@ -1,0 +1,24 @@
+{
+    "contacts": [
+        {
+            "username": "Contact_1",
+            "imageSrc": "../images/defaultProfilePicture.jpg"
+        },
+        {
+            "username": "Contact_2",
+            "imageSrc": "../images/defaultProfilePicture.jpg"
+        },
+        {
+            "username": "Contact_3",
+            "imageSrc": "../images/defaultProfilePicture.jpg"
+        },
+        {
+            "username": "Contact_4",
+            "imageSrc": "../images/defaultProfilePicture.jpg"
+        },
+        {
+            "username": "Contact_5",
+            "imageSrc": "../images/defaultProfilePicture.jpg"
+        }
+    ]
+}
