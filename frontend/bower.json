@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "angular-socket-io": "^0.7.0",
-    "font-awesome": "^5.0.10"
+    "font-awesome": "^5.0.10",
+    "moment": "^2.22.1"
   }
 }

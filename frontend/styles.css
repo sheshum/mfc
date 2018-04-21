@@ -9,7 +9,7 @@
 
 body {
     
-    /* background-image: url("images/space.jpg");   */
+    background-image: url("images/backgrounds/space.jpg");
     background-color: #fff17a70;
    
 }
@@ -119,15 +119,18 @@ ul.sidebar__menu {
 }
 
 .sidebar__search {
+   /*  display: flex; */
     text-align: center;
 }
 
 .sidebar__search form {
+    /* flex: 1 1 auto; */
     width: 100%;
     padding: 10px 40px;
 }
 
 .sidebar__search form input {
+    width: 100%;
     background-color: #424242bd;
     border: none;
     padding: 10px;

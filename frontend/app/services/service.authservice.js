@@ -59,9 +59,12 @@
         }
 
         function setCredentials( username, token ) {
-            $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + token;       
             var cookieExp = new Date();
-            cookieExp.setDate(cookieExp.getDate() + 1);
+
+            var miliseconds = cookieExp.getUTCMilliseconds();
+            cookieExp.setUTCMilliseconds(miliseconds + 720000);
+
             $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
         }
 
