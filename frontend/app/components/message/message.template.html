@@ -1,3 +1,30 @@
-<li ng-class="$ctrl.className">
-    <p>{{$ctrl.msg.from}}: {{$ctrl.msg.text}}</p>   
+<li ng-if="$ctrl.className == 'contact' " ng-class="$ctrl.className">
+    <div class="msg__picture">
+        <img src="../../../images/defaultProfilePicture.jpg" alt="">
+    </div>
+    <div class="msg__wrapper">    
+        <div class="msg__title">
+            <h4>{{$ctrl.msg.from}}:</h4>
+        </div>
+        <div class="msg__body">     
+            <p> {{$ctrl.msg.text}}</p>   
+            <span>{{$ctrl.time}}</span>
+        </div>
+    </div>
  </li>
+
+ <li ng-if="$ctrl.className == 'user' " ng-class="$ctrl.className">
+     <div class="msg__picture">
+          <img src="../../../images/chicken.jpg" alt="">
+      </div>
+    <div class="msg__wrapper">    
+        <div class="msg__title">
+            <h4>{{$ctrl.msg.from}}:</h4>
+        </div>
+        <div class="msg__body">     
+            <p> {{$ctrl.msg.text}}</p>   
+            <span>{{$ctrl.time}}</span>
+        </div>
+    </div>
+ </li>
+ <div class="clear"></div>

@@ -14,6 +14,7 @@ angular.module('message', [])
             //self.name = AuthService.loggedInUser.name;
             self.name = $rootScope.globals.currentUser.username;
             self.text = self.msg.text;
+            self.time = moment(self.msg.sentAt).format('hh:mm a');
 
             if( self.msg.from === self.name ) {
 
