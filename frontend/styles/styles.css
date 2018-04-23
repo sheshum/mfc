@@ -9,7 +9,7 @@
 
 body {
     
-    background-image: url("images/backgrounds/wood_realistic.jpg");
+    background-image: url("../images/backgrounds/wood_white.jpg");
     background-color: #5808ecb4;
    
 }
@@ -71,7 +71,7 @@ h3 {
 
   button {
     border: none;
-    background: #265f82;
+    background: tomato;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -80,7 +80,7 @@ h3 {
   }
 
   button:disabled {
-    background: #5d7483;
+    background: rgb(240, 161, 147);
     cursor: default;
   }
 

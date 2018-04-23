@@ -10,8 +10,9 @@
                    type="text" 
                    autofocus 
                    autocomplete="off"
-                   required>
-            <p ng-show="loginForm.username.$invalid && !loginForm.username.$pristine">Username is required.</p>    
+                   required ng-maxlength="30">
+            <p class="has-error" ng-show="loginForm.username.$invalid && !loginForm.username.$pristine && !loginForm.username.$error.maxlength">Username is required.</p>
+            <p class="has-error" ng-show="loginForm.username.$error.maxlength">Username is too long.</p>    
         </div>
         <div class="form-field">
             <label for="">Password: </label>
@@ -19,8 +20,9 @@
                    name="password"
                    type="password" 
                    autocomplete="off"
-                   required>
-            <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine">Password is required.</p> 
+                   required ng-minlength="5">
+            <p class="has-error" ng-show="loginForm.password.$invalid && !loginForm.password.$pristine && !loginForm.password.$error.minlength">Password is required.</p>
+            <p class="has-error" ng-show="loginForm.password.$error.minlength">Password must have at least 5 characters.</p> 
         </div>
         <div class="form-field">
             <button ng-disabled="loginForm.$invalid" type="submit">Login</button>
