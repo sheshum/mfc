@@ -7,9 +7,10 @@
             <label for="">Username: </label>
             <input ng-model="username"
                    name="username"
+                   tabindex="1"
                    type="text" 
                    autofocus 
-                   autocomplete="off"
+                 
                    required ng-maxlength="30">
             <p class="has-error" ng-show="loginForm.username.$invalid && !loginForm.username.$pristine && !loginForm.username.$error.maxlength">Username is required.</p>
             <p class="has-error" ng-show="loginForm.username.$error.maxlength">Username is too long.</p>    
@@ -18,6 +19,7 @@
             <label for="">Password: </label>
             <input ng-model="password"
                    name="password"
+                   tabindex="2"
                    type="password" 
                    autocomplete="off"
                    required ng-minlength="5">
@@ -25,7 +27,7 @@
             <p class="has-error" ng-show="loginForm.password.$error.minlength">Password must have at least 5 characters.</p> 
         </div>
         <div class="form-field">
-            <button ng-disabled="loginForm.$invalid" type="submit">Login</button>
+            <button tabindex="3" ng-disabled="loginForm.$invalid" type="submit">Login</button>
         </div>
         <div class="form-field center">
             <p>Dont have an account?</p>
