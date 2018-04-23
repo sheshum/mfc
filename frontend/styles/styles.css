@@ -9,8 +9,9 @@
 
 body {
     
-    background-image: url("../images/backgrounds/wood_white.jpg");
-    background-color: #5808ecb4;
+  
+   /*  background-color: #5808ecb4; */
+    background-color: #c9c5bfea;
    
 }
 
@@ -49,7 +50,7 @@ h3 {
 
   .chat__header li a {
       display: block;
-      color:#e0dedb;
+      color:#fcf5eb;
       text-align: center;
       padding: 15px 10px;
       line-height: 20px;
@@ -63,6 +64,13 @@ h3 {
       color: tomato;
       transition: .6s ease;
      
+  }
+
+  .header__details {
+      margin-top: 53px;
+      width: 100%;
+      height: 70px;
+      background-color: #e1e1e1;
   }
 
   input {
@@ -197,7 +205,7 @@ ul.msg-list {
     height: 100vh;
     max-height: 100vh;
     list-style-type: none;
-    padding: 75px 350px;
+    padding: 75px 350px 250px 350px;
     overflow-y: auto;
     
 }
@@ -271,7 +279,7 @@ li.contact .msg__picture {
 }
 
 .msg__body span {
-    color: rgb(148, 146, 146);
+    color: rgb(109, 109, 109);
     font-size: 11px;
     float: right;
 }
@@ -281,7 +289,7 @@ li.contact .msg__picture {
     display: flex;
     bottom: 0%;
     width: 80%;
-    background: #5f5e5cd2;
+    background: #fcf5eb;
     padding: 10px;
 }
 
@@ -297,9 +305,9 @@ li.contact .msg__picture {
 .chat__footer input {
     flex-grow: 1;
     border: none;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 50px; 
-    background-color: #fae7e1fd;
+    background-color: #fcd1aefd;
 }
 
 

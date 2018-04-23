@@ -32,9 +32,9 @@ angular.module('messages', [])
             } */
         
           msg_list.scrollTop(scroll_Height);
-          msg_list.animate({
+          /* msg_list.animate({
               scroll_Top: scroll_Height
-          }, 'slow');
+          }, 'slow'); */
 
 
         }
