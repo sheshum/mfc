@@ -1,3 +1,26 @@
 .has-error {
     color: rgb(245, 71, 94);
 }
+
+.mfc-badge {
+    position: absolute;
+    bottom: 10px;
+    display: inline-block;
+    min-width: 12px;
+    min-height: 12px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.mfc-badge.mfc-bg-green {
+    background-color: rgb(59, 255, 34);
+}
+
+
+.mfc-badge.mfc-bg-red {
+    background-color: rgb(255, 51, 51);
+}
+
+.mfc-badge.mfc-bg-yellow {
+    background-color: rgb(251, 255, 0);
+}

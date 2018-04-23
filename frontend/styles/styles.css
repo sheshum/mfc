@@ -153,6 +153,7 @@ ul.sidebar__menu, ul.sidebar__tabs {
 }
 
 ul.contacts-list li {
+    position: relative;
     display: flex;
     flex-direction: row;
     margin: 0;
