@@ -2,14 +2,16 @@ angular.module('header', [])
 
 .component('appHeader', {
     templateUrl: 'app/components/header/header.template.html',
-    controller: ['$location', 'Socket', 'AuthService', function HeaderController( $location, Socket, AuthService ) {
+    controller: ['$location', '$rootScope', 'AuthService', function HeaderController( $location, $rootScope, AuthService ) {
         
-        this.logout = function() {
+        var self = this;
+        self.username = $rootScope.globals.currentUser.username;
+        
+        self.logout = function() {
             AuthService.logout(function(){
                 
                 $location.path(['/']);
-            })
-            //Socket.disconnect();
+            });
         }
     }]
 })
