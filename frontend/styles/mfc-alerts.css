@@ -2,6 +2,32 @@
     color: rgb(245, 71, 94);
 }
 
+.alert {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(26, 209, 87, 0.541);
+}
+
+.alert.error {
+    background-color: rgba(253, 60, 70, 0.733);
+}
+
+.alert span {
+    position: absolute;
+    font-weight: 700;
+    font-size: 20px;
+    color: green;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.alert.error span {
+    color: rgb(128, 0, 0);
+}
+
 .mfc-badge {
     position: absolute;
     bottom: 10px;

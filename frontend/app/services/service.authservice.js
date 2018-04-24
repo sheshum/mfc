@@ -34,7 +34,7 @@
 
                 var _username = response.data.user.username;
                 var _token = response.data.token;
-                var _expiresIn = response.data.expiresIn;
+                var _expiresIn = response.data.expiresIn * 1000;
 
                  $rootScope.globals = {
                      currentUser : {
@@ -43,7 +43,7 @@
                      }
                  };
                  
-                 setCredentials( _username, _token );
+                 setCredentials( _username, _token, _expiresIn );
    
                  callback();
      
@@ -58,12 +58,13 @@
             callback();
         }
 
-        function setCredentials( username, token ) {
+        function setCredentials( username, token, expirationTime ) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
-            
+            debugger;
             var cookieExp = new Date();
             var miliseconds = cookieExp.getUTCMilliseconds();
-            cookieExp.setUTCMilliseconds(miliseconds + 720000);
+
+            cookieExp.setUTCMilliseconds( miliseconds + expirationTime );
 
             $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
         }
