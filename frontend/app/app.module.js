@@ -6,6 +6,7 @@ angular.module('mfc-app', [
     'header',
     'login',
     'signup',
+    'users',
     'Socket',
     'ngRoute',
     'ngCookies'

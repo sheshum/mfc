@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 const secret = 'shhhhh';
 const MONGO_DUPLICATE_CODE = require('../config').MONGO_DUPLICATE_CODE;
+const sessionExpirationTime = 1800; // 30 minutes
 
 module.exports.signupRoute = function( req, res ) {
    
@@ -66,12 +67,12 @@ module.exports.loginRoute = function ( req, res ) {
                  const jwtToken = jwt.sign({
                     username: username
                 }, secret, {
-                    expiresIn: 7200
+                    expiresIn: sessionExpirationTime
                 });
 
                 res.json({
                     token: jwtToken,
-                    expiresIn: 7200,
+                    expiresIn: sessionExpirationTime,
                     user
                 });
 

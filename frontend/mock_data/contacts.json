@@ -1,24 +1,29 @@
 {
     "contacts": [
         {
-            "username": "Contact_1",
-            "imageSrc": "../images/defaultProfilePicture.jpg"
+            "username": "Klavdija_Shosha",
+            "imageUrl": "https://i2.wp.com/tricksmaze.com/wp-content/uploads/2017/04/Stylish-Girls-Profile-Pictures-3.jpg?w=500&ssl=1",
+            "status": "online"
         },
         {
-            "username": "Contact_2",
-            "imageSrc": "../images/defaultProfilePicture.jpg"
+            "username": "Bimbi",
+            "imageUrl": "http://profilepics.xyz/wp-content/uploads/2017/07/Cute-Profile-pics-1.gif",
+            "status": "idle"
         },
         {
-            "username": "Contact_3",
-            "imageSrc": "../images/defaultProfilePicture.jpg"
+            "username": "Randy69",
+            "imageUrl": "https://www.lavieaugrandair.fr/wp-content/uploads/2016/12/profile-img.jpg",
+            "status": "offline"
         },
         {
-            "username": "Contact_4",
-            "imageSrc": "../images/defaultProfilePicture.jpg"
+            "username": "Petar+Brana",
+            "imageUrl": "https://www.lavieaugrandair.fr/wp-content/uploads/2016/12/profile-img.jpg",
+            "status": "online"
         },
         {
-            "username": "Contact_5",
-            "imageSrc": "../images/defaultProfilePicture.jpg"
+            "username": "Anonymous",
+            "imageUrl": "../images/egg_purple.jpg",
+            "status": "idle"
         }
     ]
 }

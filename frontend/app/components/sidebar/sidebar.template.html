@@ -9,41 +9,35 @@
 
     <div class="sidebar__search">
         <form>
-            <input type="search" placeholder="Search contacts">
+            <input ng-model="$ctrl.query" type="search" placeholder="Search contacts">
         </form>
 
     </div>
     <div>
         <ul class="sidebar__tabs">
             <li>
-                <a href="">Contacts</a>
+                <a ng-click="$ctrl.show = 'contacts' " href="">Contacts</a>
             </li>
             <li>
-                <a href="">Conversations</a>
+                <a ng-click="$ctrl.show = 'conversations' " href="">Conversations</a>
             </li>
         </ul>
-        <ul class="contacts-list">
-            <li>
-                <div><img src="https://i2.wp.com/tricksmaze.com/wp-content/uploads/2017/04/Stylish-Girls-Profile-Pictures-3.jpg?w=500&ssl=1" alt="" >
-                </div>
-                <div><p>Klavdija_Shosha</p></div>               
-                <div class="mfc-badge mfc-bg-green"></div>
+        <ul ng-switch="$ctrl.show" class="contacts-list">
+
+            <li ng-switch-when="contacts" ng-repeat="contact in $ctrl.contacts | filter: $ctrl.query">
+                <div><img ng-src="{{contact.imageUrl}}" alt="" ></div>
+                <div><p>{{contact.username}}</p></div>
+                <div ng-if=" contact.status == 'online' " class="mfc-badge mfc-bg-green"></div>
+                <div ng-if="contact.status == 'idle' " class="mfc-badge mfc-bg-yellow"></div> 
+                <div ng ng-if="contact.status == 'offline' " class="mfc-badge mfc-bg-red"></div>
             </li>
-            <li>
-                <div><img src="http://profilepics.xyz/wp-content/uploads/2017/07/Cute-Profile-pics-1.gif" alt="" ></div>
-                <div><p>Bimbi</p></div>
-                <div class="mfc-badge mfc-bg-yellow"></div>              
-            </li>
-            <li>
-                <div><img src="https://www.lavieaugrandair.fr/wp-content/uploads/2016/12/profile-img.jpg" alt="" ></div>
-                <div><p>Randy69</p></div>
-                <div class="mfc-badge mfc-bg-red"></div>               
-            </li>
-            <li>
-                <div><img src="https://www.lavieaugrandair.fr/wp-content/uploads/2016/12/profile-img.jpg" alt="" ></div>
-                <div><p>Petar+Brana</p></div>
-                <div class="mfc-badge mfc-bg-green"></div>               
-            </li>
+
+            <div ng-switch-when="conversations">
+                <br>
+                <br>
+                <h1>EMPTY LIST - TO DO</h1>
+            </div>
+
         </ul>
     </div>
  
