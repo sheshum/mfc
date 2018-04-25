@@ -3,8 +3,8 @@
         <div class="form-field">
             <h3>Login and Chaturbate</h3>
         </div>
-        <div class="alert">
-            <p>Logged in successfully!</p><span>&times;</span>
+        <div ng-show="showAlert" class="alert" ng-class="{'error': error}">
+            <p>{{message}}</p><span ng-click="showAlert = false">&times;</span>
         </div>
         <div class="form-field">
             <label for="">Username: </label>

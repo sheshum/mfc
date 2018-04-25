@@ -5,6 +5,9 @@ angular.module('login', [])
     $scope.username = '';
     $scope.password = '';
     
+    $scope.showAlert = false;
+    $scope.message = null;
+    $scope.error = false;
 
     $scope.login = function() {
         var user = {
@@ -12,9 +15,14 @@ angular.module('login', [])
             password: $scope.password
         }
         AuthService.login( user, function( err ) {
+      
             if( err ) {
-                console.log( err );
+                $scope.error = true;
+                $scope.showAlert = true;
+                $scope.message = err.data.errmsg;
+              
             } else {
+                $scope.error = false;
                 $location.path(['/auth']);
             }
         });
