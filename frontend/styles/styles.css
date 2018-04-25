@@ -23,7 +23,6 @@ h3 {
 
   ul.chat__header {
       position: fixed;
-      overflow: hidden;
       top: 0%;
       width: 80%;
       list-style-type: none;
@@ -39,7 +38,7 @@ h3 {
   }
 
   #user-picture {
-      width: 45;
+      width: 45px;;
       height: 45px;
       border-radius: 10px;
       padding: 0;
@@ -47,8 +46,11 @@ h3 {
       border: 3px solid whitesmoke;
       
   }
+  #user-picture:hover {
+      cursor: pointer;
+  }
 
-  .chat__header li a {
+    a#header__username {
       display: block;
       color:#fcf5eb;
       text-align: center;
@@ -58,12 +60,44 @@ h3 {
       font-weight: bold;
       cursor: pointer;
   }
-
-  .chat__header li a:hover {
+/* VISE NE TREBA POSTO CE BITI SAMO USERNAME SA SLIKOM U HEDERU*/
+  /* .chat__header li a:hover {
       background-color: #363533;
       color: tomato;
       transition: .6s ease;
      
+  } */
+
+  .dropdown {
+      position:  relative;
+      display: inline-block;
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      border: 1px solid rgb(248, 123, 100);
+      background-color:whitesmoke;
+      min-width: 200px;
+      z-index: 1;
+    
+  }
+
+  .dropdown-content .dropdown-item {
+      display: block;
+      text-decoration: none;
+      padding: 10px 5px;
+      color: rgb(53, 50, 50);
+      font-weight: bold;
+  }
+  .dropdown-content .dropdown-item:hover {
+      cursor: pointer;
+      background-color: rgb(209, 208, 208);
   }
 
   .header__details {

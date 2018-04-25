@@ -1,10 +1,16 @@
 
     <ul class="chat__header">
         <li>
-            <img id="user-picture" src="../../../images/chicken.jpg" alt="">
+            <div class="dropdown">
+                <img id="user-picture" src="../../../images/chicken.jpg" alt="">
+                <div class="dropdown-content">
+                    <div class="dropdown-item">Profile Info<span style="float:right;"><i class="fa fa-lg fa-user"></i></span></div>
+                    <div class="dropdown-item" ng-click="$ctrl.logout()">Sign Out<span style="float:right"><i class="fa fa-lg fa-sign-out-alt"></i></span></div>
+                </div>
+            </div>
         </li>
-        <li><a ng-click="$ctrl.logout()">Sign Out</a></li>
-        <li><a href="">{{$ctrl.username}}</a></li>
+       <!--  <li><a ng-click="$ctrl.logout()">Sign Out</a></li> -->
+        <li><a id="header__username">{{$ctrl.username}}</a></li>
     </ul>
     <div class="header__details">
 
