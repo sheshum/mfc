@@ -60,7 +60,7 @@
 
         function setCredentials( username, token, expirationTime ) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
-            debugger;
+            
             var cookieExp = new Date();
             var miliseconds = cookieExp.getUTCMilliseconds();
 

@@ -7,14 +7,25 @@ angular.module('messages', [])
         var self = this;
         self.messages = [];
         self.className = '';
+        self.showImage = true;
        
       
-        Socket.on('new_message', function( message ) {    
-            self.messages.push(message);
+        Socket.on('new_message', function( message ) {
+
+            var length = self.messages.length;
+
+            if( length > 0 ) {
+
+                var lastMessage = self.messages[length - 1];
+                if( lastMessage.from === message.from ) self.showImage = false;
+                else self.showImage = true;
+
+            } else {
+                self.showImage = true;
+            }
+            self.messages.push( message );
+            
             scrollToBottom();
-           /*  $('html, body, .chat__main').animate({
-                scrollTop: document.body.scrollHeight
-            }, 'fast'); */
         });
 
 

@@ -3,6 +3,7 @@ angular.module('message', [])
 .component('appMessage', {
     bindings: {
         "msg": '<'
+       
     },
     templateUrl: 'app/components/message/message.template.html',
     controller: ['AuthService', '$rootScope', function MessageController( AuthService, $rootScope ) {
@@ -14,6 +15,7 @@ angular.module('message', [])
             //self.name = AuthService.loggedInUser.name;
             self.name = $rootScope.globals.currentUser.username;
             self.text = self.msg.text;
+            
             self.time = moment(self.msg.sentAt).format('hh:mm A');
 
             if( self.msg.from === self.name ) {
